@@ -12,13 +12,15 @@
 </div>
 
 <div class="messages">
-　<div class="message">
+  <%= render partial: 'message', collection: @messages %>
+<!-- ここから削除する -->
+  <div class="message">
     <div class="upper-message">
       <div class="message-user">
-        Tom
+      Tom
       </div>
       <div class="message-date">
-        2020/3/31(Wed) 12:43:30
+      2020/3/31(Wed) 12:43:30
       </div>
     </div>
     <div class="lower-message">
@@ -43,6 +45,7 @@
       </div>
     </div>
   </div>
+<!-- ここまで -->
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
